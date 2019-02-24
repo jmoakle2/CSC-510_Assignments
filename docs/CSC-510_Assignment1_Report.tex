@@ -1,4 +1,6 @@
 \documentclass[a4paper,12pt]{IEEEtran}
+\usepackage{graphicx}
+\graphicspath{{./docs/}}
 \begin{document}
 
 \title{CSC 510 Assignment 1 Report}
@@ -21,18 +23,21 @@ Using basic statistical analysis on the first and last feature columns in the \t
 
 \subsection{Data Visualization}
 \label{sec2}
-The images below are graphic visualizations of the overall mean and standard deviation values in relation to the incrementally increasing number of features for both the carpet and hardwood datasets. While the values in each respective graph tend to have a visually distinct change with each addition of a feature, they never seem to radically change. In fact, the averages and variances of only one feature and sixty-four features for the carpet dataset are have similar numerical values, while the averages of only one feature and sixty-four features for the hardwood dataset are approximately equivalent but the variance seems to increase with an increase in features. What this means is that the observations within the carpet dataset are similar despite the growing number of features while hardwood dataset observations increasingly differ with the inclusion of more features.
+The following images are graphic visualizations of the overall mean and standard deviation values in relation to the incrementally increasing number of features for both the carpet and hardwood datasets. While the values in each respective graph tend to have a visually distinct change with each addition of a feature, they never seem to radically change. In fact, the averages and variances of only one feature and sixty-four features for the carpet dataset are have similar numerical values, while the averages of only one feature and sixty-four features for the hardwood dataset are approximately equivalent but the variance seems to increase with an increase in features. What this means is that the observations within the carpet dataset are similar despite the growing number of features while hardwood dataset observations increasingly differ with the inclusion of more features.
+\includegraphics[width=8cm]{carpethardwood_mean}
+\includegraphics[width=8cm]{carpethardwood_stddev}
 According to the two histograms created from the first feature of the carpet and hardwood observations, both sets apparently follow Gaussian distributions. By using this knowledge, detecting skewness in the data will be less complex to perform. This also means that any proababilistic and statistical methods applied to either datasets will result in patterns following a bell-shaped curve.
+\includegraphics[width=8cm]{carpethardwood_hist01}
 
 \subsection{Data Inference}
 \label{sec3}
 Now that statistical extraction and data visualization has been performed, characteristics of the data can be appropriately identified.
 \begin{enumerate}
 \item On the topic of data pattern deformation, neither the carpet nor hardwood datasets are imbalanced, inaccurate, or incomplete; all of which been observed in a three-dimensional scatter-plot composed of three features from each respective set.
-
 \item Neither the carpet and hardwood datasets should be classified as big data for two reasons. (1) Both datasets have features that are the same data type, which means that it does not feature much variety. (2) The number of observations is far greater than the number of features in the carpet and hardwood datasets, meaning the data is not highly dimensional.
 \item While normalization and standardization are not required for pattern detection for either of the two datasets, it is extremely helpful in data visualization because it allows the for comparing and contrasting carpet and hardwood data to be simplified. For example, the following images demonstrate that when plotting the first, fifty-fourth, and fifty-ninth features, it shows that the hardwood features will follow a more linear trend than the carpet features.
-
+\includegraphics[width=8cm]{carpethardwood_3d01}
+\includegraphics[width=8cm]{carpethardwood_3d02}
 \end{enumerate}
 
 
@@ -47,13 +52,13 @@ The following datasets utilized in this last portion of this report are called \
 \label{sec5}
 For the board game data basic statistical analysis, the features 'avg\_rating' and 'geek\_rating' were used in the computation process where 'avg\_rating' stands for the average rating of the board game and 'geek\_rating' is the rating given by the website, https://boardgamegeek.com/. The calculated mean of avg\_rating from the 2017 board game data and 2018 board game data were 6.93 and 6.06 while the mean of geek\_rating from 2017 and 2018 were 6.96 and 6.08. Meanwhile the calculated standard deviation of 2017's avg\_rating and geek\_rating are 0.57 and 0.48 and 2018's avg\_rating and geek\_rating are 0.56 and 0.48. Using this, the covariance of avg\_rating and geek\_rating from 2017 comes out to be 0.12 and the covariance of the 2018 counterparts is 0.13. This all leads to the correlation between these features for 2017 and 2018 to be 0.46 and 0.47, respectively. Thus, it is safe to assume that there is no linear correlation between avg\_rating and geek\_rating in either 2017 or 2018. Also, it can be seen that the statistical values of avg\_rating and geek\_rating had only a miniscule transformation in approximately one year's time.
 
-
 \subsection{Data Visualization}
 \label{sec6}
 The following line graphs provide visual proof that the numerical features from the 2017 and 2018 board game data are similar in value to each other because both datasets have almost equivalent mean and variance values per number of included features.
-
+\includegraphics[width=8cm]{bgg_mean}
+\includegraphics[width=8cm]{bgg_stddev}
 As for the histograms below, they demonstrate that both board game datasets follow normal distributions in which the two distributions appear to be left-positively skewed. The skewness of the 2017 and 2018 patterns are good signs for classification since it will be easier to explain data characteristics.
-
+\includegraphics[width=8cm]{bgg_hist01}
 
 \subsection{Data Inference}
 \label{sec7}
@@ -62,13 +67,14 @@ With the basic statistical information extracted and both datasets have been plo
 \item Neither of the board game datasets appear to be suffering from any type of data deformation since they contain the same amount of observations and features, and each feature column did not appear to be containing any null values.
 \item The data, once merged, could be considered big data, though low-dimensional, due to the fact that all feature columns were not of the same datatype (only the numerical values were utilized in previous computations and analysis) and the 2018 board game data set is an updated version of the data given in the 2017 game set.
 \item Normalizing and standardizing the data, while grant some visual assistance to the datasets, is not need in the data processing since both graphs tend to retain the same bell-shaped pattern for each of their respective histograms and three-dimensional scatter-plots.
+\includegraphics[width=8cm]{bgg_3d01}
 \end{enumerate}
 
 \section{Differences Between Floor and Board Game Data}
 While the carpet and hardwood datasets and the board game datasets from 2017 and 2018 appear to have some similarities in terms of distribution patterns and statistical information, each dataset has major differences and comes with its own issues. The carpet and hardwood data cannot be classified as big data (Section \ref{sec1}, page \pageref{sec1}) while the board game data can be (Section \ref{sec7}, page \pageref{sec7}. Other issues that carpet and hardwood face is that unlike the board game data, these datasets cannot, individually, be classified due to a lack of labels included with the original data. On the other hand, the board game data from 2017 and 2018 are extremely similar in value to each other (Section \ref{sec5}, page \pageref{sec5} for more details) which can cause some visualization classification and pattern detection issues, if not careful, while the carpet and hardwood floor datasets are similar enough to make fair comparisons yet still be able to determine distinct differences in the floor data (Section \ref{sec2}, page \pageref{sec2}). Also, the number of features used in the combined carpet and hardwood floor data (Section \ref{sec4}, page \pageref{sec4}) will make it easier for machines to classify via supervised learning than the ones from board game data from 2017 and 2018 because the number of numerical features in the floor datasets is much larger than the board game dataset features.
 
 \section{Summary of "Big data classification"}
-Concerning the paper, "Big data classification: Problems and challenges in network intrusion prediction with machine learning"\nocite{cite1}, it essentially discusses the fundamental properties of big data, the data analytic techniques involved in that field of study, and the issues that arise with the characteristics and management of big data classification. Suthaharan first proves that network traffic data satisfies the three-dimensional C3 space instead of the traditional V3 space. Next, he demonstrates issues and challenges that data analytics faces on big data management and possible solutions in technologies such as UILS, NTRS, HDFS, and CCSS. Then, he moves on to the topic of three learning techniques that can be used to tackle the big data complex classification problem, which are machine, representation, and machine-lifelong learning, and their own respective challenges. Finally, Suthaharan goes over risks and problems that are associated with user interaction with big data and how big data analysis can suffer from challenges with data visualization and uncertainity. Thus, Suthaharan achieves his goal in pointing out the issues that come along with network intrusion and big data classification, and what solutions that could be applied in order to resolve these problems.
+Concerning the paper, "Big data classification: Problems and challenges in network intrusion prediction with machine learning", it essentially discusses the fundamental properties of big data, the data analytic techniques involved in that field of study, and the issues that arise with the characteristics and management of big data classification. Suthaharan first proves that network traffic data satisfies the three-dimensional C3 space instead of the traditional V3 space. Next, he demonstrates issues and challenges that data analytics faces on big data management and possible solutions in technologies such as UILS, NTRS, HDFS, and CCSS. Then, he moves on to the topic of three learning techniques that can be used to tackle the big data complex classification problem, which are machine, representation, and machine-lifelong learning, and their own respective challenges. Finally, Suthaharan goes over risks and problems that are associated with user interaction with big data and how big data analysis can suffer from challenges with data visualization and uncertainity. Thus, Suthaharan achieves his goal in pointing out the issues that come along with network intrusion and big data classification, and what solutions that could be applied in order to resolve these problems.
 \label{sec8}
 
 \section{Results}
