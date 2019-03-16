@@ -1,0 +1,22 @@
+\documentclass[a4paper,12pt]{IEEEtran}
+\usepackage{graphicx}
+\begin{document}
+
+\title{CSC 510 Assignment 2 Report}
+\author{Justin Oakley}
+\maketitle\
+
+\pagenumbering{arabic}
+\tableofcontents
+\newpage
+
+\section{Introduction}
+This report is about knowing machine learning techniques that will help in selecting suitable techniques which will provide excellent quality results for applications using the computing environment utilized in an experiment. The reason for why understanding these methods are so important in big data is because they provide higher quality data not only for machines to processes, but also for them to produce. The steps taken in order to obtain the desired data output are based on the type of learning that the machine must go through and the appropriate selection of models and algorithms that follow with that type of learning. In this assignment, supervised learning is the main type of learning that will be focused upon and the modeling strategies that will be heavily utilized in data analyzation are regression and classification. As for the information that was processed, eight different datasets were used in this assignment as well; four computer-generated datasets of differing observation amounts and two datasets based on recent graduate and graduate students, called \textit{recent-grads.csv} and \textit{grad-students.csv}, are experimented on in the regression model section, and two datasets about captured network normal and attack traffic, named \textit{nslkdd-version1.csv} and \textit{nslkdd-version2.csv}, are utilized in the classification portion. All data analyzation for the assignment is coded in the Python 3 language via the Apache Spark 2.4.0 computational engine on an Apache Hadoop cluster. With this in mind, the goal of the comprehending supervised machine learning techniques through model and algorithm selection can be achieved.
+
+\section{Comparison of Regression Models}
+The first step in developing a working knowledge of the functionality of machine learning techniques was to perform four different types of regression on four different system generated datasets of varying observation sizes, along with the \textit{recent-grads.csv} and \textit{grad-students.csv} files. The four regression models used in this portion of the assignment were standard regression, ridge regression, lasso regression, and elastic-net regression. Each type of regression are initially based on minimizing the error factor \textit{E}, then are developed in such a way that will result in each regression model's respective estimated parameter (matrix) \textit{A}, which will then be used to form the model itself in the notation, \(\textit{y} = \textit{A}\textbf{x}\) where \textbf{x} is the domain variable and \textit{y} is the response variable. In the following sections, the individual regression models will be explored using the six datasets, then compared and contrasted to see if the change in model had any effect on the data. \underline{Note}: two datasets are one-dimensional with the only difference being that one contains twenty observations and the other has two thousand observations, while the other two datasets are made for two dimensions with the only difference being that these two sets have the same number of observations as the one-dimesional sets, respectively; the two graduate student datasets are based on employment, unemployment, and unemployment rate features of the two most popular majors per dataset.
+
+\subsection{Standard Regression}
+\label{sec1}
+
+\end{document}
